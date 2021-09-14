@@ -12,7 +12,7 @@ namespace ObjectOrientedPrograms
             List<InventoryDetails> listDetails = new List<InventoryDetails>();
             Console.WriteLine("Number of Inventory ");
             int iteration = Convert.ToInt32(Console.ReadLine());
-            for(int i=0; i<iteration; i++)
+            for (int i = 0; i < iteration; i++)
             {
                 Console.WriteLine("Enter the name of item");
                 string itemName = Console.ReadLine();
@@ -34,7 +34,7 @@ namespace ObjectOrientedPrograms
             Console.WriteLine("Successfully data stored in Jason file");
             string file = File.ReadAllText(@"inventoryJason.jason");
             var data1 = JsonConvert.DeserializeObject<List<InventoryDetails>>(file);
-            foreach(var i in data1)
+            foreach (var i in data1)
             {
                 Console.WriteLine(i.name);
             }
