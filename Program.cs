@@ -20,13 +20,12 @@ namespace ObjectOrientedPrograms
                 int itemWeight = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter the price of item");
                 int itemPrice = Convert.ToInt32(Console.ReadLine());
-                InventoryDetails inventoryDetails = new InventoryDetails()
+                listDetails.Add( new InventoryDetails()
                 {
                     name = itemName,
                     weight = itemWeight,
                     price = itemPrice
-                };
-                listDetails.Add(inventoryDetails);
+                });
             }
             string inventoryResultJason = JsonConvert.SerializeObject(listDetails);
             //Console.WriteLine(inventoryResult);
