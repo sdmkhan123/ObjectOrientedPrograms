@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ObjectOrientedPrograms
+﻿namespace ObjectOrientedPrograms
 {
     class InventoryDetails
     {
         public string name { get; set; }
         public int weight { get; set; }
-        public int price { get; set; }
+        public int pricePerKg { get; set; }
+        public int totalPriceOfRice { get; set; }
+        public int totalPriceOfPulse { get; set; }
+        public int totalPriceOfWheats { get; set; }
     }
 }
