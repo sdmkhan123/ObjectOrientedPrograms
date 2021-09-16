@@ -1,41 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ObjectOrientedPrograms.InventoryDetails;
+using System;
 using Newtonsoft.Json;
 using System.IO;
+
 namespace ObjectOrientedPrograms
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("WelCome to Object Oriented Programs");
-            List<InventoryDetails> listDetails = new List<InventoryDetails>();
-            Console.WriteLine("Number of Inventory ");
-            int iteration = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < iteration; i++)
+            Console.WriteLine("Welcom to Object Oriented Programs\n");
+            while (true)
             {
-                Console.WriteLine("Enter the name of item");
-                string itemName = Console.ReadLine();
-                Console.WriteLine("Enter the weight of item");
-                int itemWeight = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter the price of item");
-                int itemPrice = Convert.ToInt32(Console.ReadLine());
-                listDetails.Add( new InventoryDetails()
+                Console.WriteLine("\nChoose An Option to Perform an Action :");
+                Console.WriteLine("Press 1 : Json Inventory\nPress 2 : Exit");
+                Console.WriteLine("----------------------------------------");
+                int userOption = int.Parse(Console.ReadLine());
+                switch (userOption)
                 {
-                    name = itemName,
-                    weight = itemWeight,
-                    price = itemPrice
-                });
-            }
-            string inventoryResultJason = JsonConvert.SerializeObject(listDetails);
-            //Console.WriteLine(inventoryResult);
-            File.WriteAllText(@"inventoryJason.jason", inventoryResultJason);
-            Console.WriteLine("Successfully data stored in Jason file");
-            string file = File.ReadAllText(@"inventoryJason.jason");
-            var data1 = JsonConvert.DeserializeObject<List<InventoryDetails>>(file);
-            foreach (var i in data1)
-            {
-                Console.WriteLine(i.name);
+                    case 1:
+                        Console.WriteLine("Display Json Inventory Details\n");
+                        InventoryData obj = new InventoryData();
+                        obj.Data();
+                        break;
+                    case 2:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Please Enter a valid Options:\n");
+                        break;
+                }
+
             }
         }
     }
