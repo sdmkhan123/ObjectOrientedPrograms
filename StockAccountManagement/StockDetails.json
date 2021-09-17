@@ -1,0 +1,29 @@
+{
+  "Stocks": [
+    {
+      "NameOfShare": "FirstTypeName",
+      "NumberOfShare": 29,
+      "PriceOfShare": 1491
+    },
+    {
+      "NameOfShare": "SecondTypeShareName",
+      "NumberOfShare": 26,
+      "PriceOfShare": 1108
+    },
+    {
+      "NameOfShare": "ThirdTypeShareName",
+      "NumberOfShare": 24,
+      "PriceOfShare": 1227
+    },
+    {
+      "NameOfShare": "ForthTypeShareName",
+      "NumberOfShare": 32,
+      "PriceOfShare": 1113
+    },
+    {
+      "NameOfShare": "FifthTypeShareName",
+      "NumberOfShare": 43,
+      "PriceOfShare": 2005
+    }
+  ]
+}
