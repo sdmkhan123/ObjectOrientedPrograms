@@ -12,7 +12,7 @@ namespace ObjectOrientedPrograms.InventoryDetails
         {
             //Add Details
             //Create List of type invetory which store the object of the class Inventory
-            List<Inventory> inventoryList = new List<Inventory>();
+            List<Inventorys> inventoryList = new List<Inventorys>();
             Console.WriteLine("Number of Inventory details ");
             int iteration = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < iteration; i++)
@@ -23,7 +23,7 @@ namespace ObjectOrientedPrograms.InventoryDetails
                 int itemWeight = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter the price of item");
                 int itemPrice = Convert.ToInt32(Console.ReadLine());
-                inventoryList.Add(new Inventory()
+                inventoryList.Add(new Inventorys()
                 {
                     Name = itemName,
                     Weight = itemWeight,
@@ -37,7 +37,7 @@ namespace ObjectOrientedPrograms.InventoryDetails
             Console.WriteLine("Inventory Details Added SuccessFully in File.");
             // ReadFile using Deserialize Json
             string datafile = File.ReadAllText(@"F:\DotNetClass\ObjectOrientedPrograms\InventoryDetails\InventoryDetails.json");
-            List<Inventory> returnDataObj = JsonConvert.DeserializeObject<List<Inventory>>(datafile);
+            List<Inventorys> returnDataObj = JsonConvert.DeserializeObject<List<Inventorys>>(datafile);
             //Display JSON file Data
             foreach (var form in returnDataObj)
             {
